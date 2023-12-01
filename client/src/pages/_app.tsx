@@ -11,7 +11,7 @@ function App({ Component, pageProps }: AppProps) {
     <StyleSheetManager shouldForwardProp={isPropValid}>
       <ThemeProvider theme={theme}>
         <Head>
-          <title>Next.js Boilerplate</title>
+          <title>Move's</title>
           <link
             rel="shortcut icon"
             href="/img/icon-192.png"
@@ -19,8 +19,8 @@ function App({ Component, pageProps }: AppProps) {
           />
           <link rel="apple-touch-icon" href="/img/icon-512.png" />
           <link rel="manifest" href="/manifest.json" />
-          <meta name="theme-color" content="#06092B" />
-          <meta name="description" content="A simple boilerplate for next.js" />
+          <meta name="theme-color" content="#06092B" />S
+          <meta name="description" content="Move's Landing Page" />
         </Head>
         <GlobalStyles />
         <Component {...pageProps} />
