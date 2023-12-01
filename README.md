@@ -116,10 +116,12 @@ Ainda no server, tem uma abstração construída para facilitar o contato de pes
 2. Dentro desse novo arquivo criado, coloque esse texto abaixo
 
    ```javascript
-      # ###### GENERAL SETTINGS #######
+      ####### GENERAL SETTINGS #######
       PROJECT_NAME=pta
-      SERVER_PORT=3001 
-
+      
+      # ###### SERVER SETTINGS #######
+      SERVER_PORT=3001
+      
       # ###### DATABASE SETTINGS #######
       DATABASE_TYPE=postgres
       DATABASE_HOST=${PROJECT_NAME}-db
@@ -127,7 +129,6 @@ Ainda no server, tem uma abstração construída para facilitar o contato de pes
       DATABASE_USER=postgres
       DATABASE_PASSWORD=docker
       DATABASE_DB=${PROJECT_NAME}
-
       DATABASE_URL=${DATABASE_TYPE}://${DATABASE_USER}:${DATABASE_PASSWORD}@${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_DB}
    ```
 3. Abra um novo terminal no vscode
