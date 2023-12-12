@@ -1,16 +1,35 @@
 import React from "react";
-import { HomeContainer } from "./style";
-import { LogoCITi } from "../assets";
+import { CardsContainer, HomeContainer, HomeContent, Title, TitleContainer, TitleUnderline } from "./style";
+import { FooterDesign} from "components";
 
 export default function Home() {
   return (
     <HomeContainer>
-      <img src={LogoCITi.src} alt="" />
-      <h1>Next.js Boilerplate</h1>
-      <p>
-        Made with <strong>&lt; &#x0002F; &gt;</strong> and{" "}
-        <strong>&hearts;</strong> by CITi
-      </p>
+      <HomeContent>
+
+        <CardsContainer>
+          {
+            data.map((item, index)=> {
+              return(
+                <FooterDesign
+                  facebook={item.facebook}
+                  instagram={item.instagram}
+                  linkedin={item.linkedin}
+                  />
+              )
+            })
+          }
+      </CardsContainer>
+      </HomeContent>
     </HomeContainer>
   );
 }
+
+// dados que estão sendo passados para o componente UserCard por meio do map
+const data = [
+  {
+    linkedin: "https://www.linkedin.com/company/movesbrasil/",
+    instagram: "https://instagram.com/movesbrasil?igshid=MzMyNGUyNmU2YQ==",
+    facebook: "https://www.facebook.com/movesbrasill"
+  },
+]

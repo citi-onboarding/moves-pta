@@ -116,20 +116,13 @@ Ainda no server, tem uma abstração construída para facilitar o contato de pes
 2. Dentro desse novo arquivo criado, coloque esse texto abaixo
 
    ```javascript
-      ####### GENERAL SETTINGS #######
-      PROJECT_NAME=pta
-      
-      # ###### SERVER SETTINGS #######
-      SERVER_PORT=3001
-      
-      # ###### DATABASE SETTINGS #######
-      DATABASE_TYPE=postgres
-      DATABASE_HOST=${PROJECT_NAME}-db
-      DATABASE_PORT=5432
-      DATABASE_USER=postgres
-      DATABASE_PASSWORD=docker
-      DATABASE_DB=${PROJECT_NAME}
-      DATABASE_URL=${DATABASE_TYPE}://${DATABASE_USER}:${DATABASE_PASSWORD}@${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_DB}
+    DATABASE_TYPE=postgres
+    DATABASE_PORT=5432
+    DATABASE_HOST=pta-db
+    DATABASE_USER=root
+    DATABASE_PASSWORD=123456
+    DATABASE_NAME=pta
+    DATABASE_DB=pta-one-page
    ```
 3. Abra um novo terminal no vscode
 4. Com o terminal aberto, escreva essa sentença abaixo e dê enter
@@ -351,13 +344,13 @@ Exemplo:
 4. Com o terminal aberto, escreva essa sentença abaixo e dê enter
 
    ```sh
-   yarn dev
+   yarn start
    ```
 
    ou 
 
    ```sh
-   npm run dev
+   npm run start
    ```
 
 3. Espere que o terminal esteja dessa maneira
