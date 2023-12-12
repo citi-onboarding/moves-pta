@@ -10,8 +10,13 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+import { alpha } from "@mui/material";
+import { Logo } from "./style";
+import { LogoMoves } from "assets";
+import Image from "next/image";
+import media from "styled-media-query";
 
-const pages = ["Products", "Pricing", "Blog", "Hello", "World"];
+const pages = ["Home", "Sobre", "Serviços", "Time", "Contato"];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -26,13 +31,15 @@ function ResponsiveAppBar() {
     setAnchorElNav(null);
   };
 
+
   return (
-    <AppBar sx={{ backgroundColor: "#6EB6B4" }}>
+    <AppBar sx={{ backgroundColor: alpha("#6EB6B4", 0.5) }}>
       <Container maxWidth="xl">
         <Toolbar
           disableGutters
           sx={{
             display: "flex",
+           
           }}
         >
           <Box
@@ -42,18 +49,21 @@ function ResponsiveAppBar() {
                 xs: "none",
                 md: "flex",
                 justifyContent: "space-between",
+                fontFamily: "Lato"
               },
             }}
           >
-            <AdbIcon
+            {/* <Logo src={LogoMoves.src} alt="logo" /> */}
+            <Image className="LogoS" src={LogoMoves} alt="Logo Moves" width={214} height={99} />
+            {/* <AdbIcon
               sx={{ display: { xs: "none", md: "flex" }, mr: 1, mt: 2.5 }}
-            />
+            /> */}
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
+                  sx={{ my: 2, color: "#004A8C", display: "block" }}
                 >
                   {page}
                 </Button>
@@ -67,12 +77,12 @@ function ResponsiveAppBar() {
                 xs: "flex",
                 md: "none",
                 justifyContent: "space-between",
+                color: "#004A8C"
               },
             }}
           >
-            <AdbIcon
-              sx={{ display: { xs: "flex", md: "none" }, mr: 1, mt: 1.5 }}
-            />
+
+            <Image className="LogoS" src={LogoMoves} alt="Logo Moves" width={136} height={63} />
             <IconButton
               size="large"
               aria-label="account of current user"
