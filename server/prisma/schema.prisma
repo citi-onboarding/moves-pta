@@ -22,3 +22,11 @@ model Test {
   name String
   age  Int
 }
+
+model Person{
+  id   Int    @id @default(autoincrement())
+  name String
+  role String
+  link_img String
+  description String
+}
