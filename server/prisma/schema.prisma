@@ -17,6 +17,12 @@ model User {
   age       Int
 }
 
+model Service {
+  id        Int    @id @default(autoincrement())
+  imageLink String
+  serviceDescription  String
+}
+
 model Test {
   id   Int    @id @default(autoincrement())
   name String
