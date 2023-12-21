@@ -1,3 +1,3 @@
 import FooterSection from "./Footer";
-
-export {FooterSection};
+import ResponsiveAppBar from "./AppBar";
+export {ResponsiveAppBar, FooterSection};
