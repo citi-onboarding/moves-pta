@@ -3,9 +3,6 @@ import Image from 'next/image'; // Import the next/image component
 
 export const Footer = styled.div`
   display: flex;
-  position: fixed;
-  bottom: 0;
-  left: 0;
   width: 100%;
   height: 243px;
   background-color: #004A8C;
@@ -31,13 +28,16 @@ export const TextContainer = styled.div`
 
 export const Title = styled.p`
     font-size: 16px;
+    margin-top: 20px;
     font-weight: 700;
     color: #ffffff;
 `;
 
 export const Text = styled.p`
     font-size: 14px;
+    margin-top: 10px;
     color: #ffffff;
+    margin-bottom: 40px;
 `;
 
 export const IconImage = styled(Image)`
