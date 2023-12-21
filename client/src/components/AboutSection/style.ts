@@ -13,6 +13,10 @@ export const AboutSectionContainer = styled.section`
   width: auto;
   min-width: 100%; /* Ensure minimum width is 100% of the viewport */
   min-height: 100vh; /* Set minimum height to 100% of the viewport height */
+  margin-top: 400px;
+  @media (max-width: 1100px) {
+    flex-direction: column;
+  }
 `;
 
 
@@ -22,17 +26,20 @@ export const ImageContainer = styled.div`
   align-items: center;
   justify-content: center;
   margin-right: 30px;
-  @media (max-width: 600px) {
-    display: none; /* Hide the ImageContainer on smaller screens */
+
+  @media (max-width: 1100px) {
+    margin-bottom: 30px;
   }
 `;
 
 export const SobreImage = styled(Image)`
   width: 558px;
   height: 372px;
-  @media (max-width: 1100px) {
-    display: none; /* Hide the image itself on smaller screens */
-  }
+
+    @media (max-width: 1100px) {
+        width: 360px; /* Make the image take up the whole width on smaller screens */
+        height: 240px;
+    }
 `;
 
 export const TextContainer = styled.div`
