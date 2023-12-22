@@ -53,11 +53,7 @@ function ResponsiveAppBar() {
               },
             }}
           >
-            {/* <Logo src={LogoMoves.src} alt="logo" /> */}
             <Image className="LogoS" src={LogoMoves} alt="Logo Moves" width={214} height={99} />
-            {/* <AdbIcon
-              sx={{ display: { xs: "none", md: "flex" }, mr: 1, mt: 2.5 }}
-            /> */}
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
                 <Button
