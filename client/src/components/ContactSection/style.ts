@@ -46,7 +46,7 @@ export const TextContainer = styled.div`
     margin-left: 50px;
   }
 
-  @media (max-width: 1350px) {
+  @media (max-width: 1200px) {
     width: 100%;
     align-items: center;
     margin-left: 0px;

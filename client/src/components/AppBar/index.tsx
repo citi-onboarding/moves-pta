@@ -15,8 +15,9 @@ import { Logo } from "./style";
 import { LogoMoves } from "assets";
 import Image from "next/image";
 import media from "styled-media-query";
+import { Link } from "react-scroll";
 
-const pages = ["Home", "Sobre", "Serviços", "Time", "Contato"];
+const pages = ["home", "sobre", "serviços", "time", "contato"];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -108,9 +109,11 @@ function ResponsiveAppBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
+                <Link key={page} to={page} smooth={true} duration={500}>
+                  <MenuItem key={page} onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">{page}</Typography>
+                  </MenuItem>
+                </Link>
               ))}
             </Menu>
           </Box>

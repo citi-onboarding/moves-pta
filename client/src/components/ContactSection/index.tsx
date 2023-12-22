@@ -18,6 +18,7 @@ type ContactSectionProps = {
 };
 export default function ContactSection({ id }: ContactSectionProps) {
     const isSmallScreen = useMediaQuery('(max-width: 600px)'); // Adjust the maximum width as needed
+    const isMediumScreen = useMediaQuery('(max-width: 1200px)'); // Adjust the maximum width as needed
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -62,6 +63,12 @@ export default function ContactSection({ id }: ContactSectionProps) {
   const formStyles = {
     display: 'flex',
     flexDirection: 'column',
+    width: '100%',
+  };
+
+  const formStylesMediumScreen = {
+    width: '100%',
+    alignItems: 'center',
   };
 
   return (
@@ -74,14 +81,14 @@ export default function ContactSection({ id }: ContactSectionProps) {
             <ParagraphContainer>
               Se interessou pela nossa solução ou quer fazer parte dela? Tem mais alguma dúvida? Não exite em falar conosco!
             </ParagraphContainer>
-            <form onSubmit={handleSubmit} style={formStyles}>
-              <Input id="name" label="DIGITE SEU NOME" value={formData.name} onChange={handleChange} rows={1} isSmallScreen={isSmallScreen} />
-              <Input id="email" label="DIGITE SEU E-MAIL" value={formData.email} onChange={handleChange} rows={1} isSmallScreen={isSmallScreen} />
-              <Input id="phone" label="DIGITE SEU TELEFONE" value={formData.phone} onChange={handleChange} rows={1} isSmallScreen={isSmallScreen} />
-              <Input id="message" label="DIGITE SUA MENSAGEM" value={formData.message} onChange={handleChange} rows={5} isSmallScreen={isSmallScreen} />
-              <Button type="submit" variant="contained" color="primary" sx={{ width: '193px', height: '40px' }} style={buttonStyles}>
-                SAIBA MAIS
-              </Button>
+            <form onSubmit={handleSubmit} style={isMediumScreen ? { ...formStyles, ...formStylesMediumScreen } : formStyles}>
+                <Input id="name" label="DIGITE SEU NOME" value={formData.name} onChange={handleChange} rows={1} isSmallScreen={isSmallScreen} />
+                <Input id="email" label="DIGITE SEU E-MAIL" value={formData.email} onChange={handleChange} rows={1} isSmallScreen={isSmallScreen} />
+                <Input id="phone" label="DIGITE SEU TELEFONE" value={formData.phone} onChange={handleChange} rows={1} isSmallScreen={isSmallScreen} />
+                <Input id="message" label="DIGITE SUA MENSAGEM" value={formData.message} onChange={handleChange} rows={5} isSmallScreen={isSmallScreen} />
+                <Button type="submit" variant="contained" color="primary" sx={{ width: '193px', height: '40px' }} style={buttonStyles}>
+                  SAIBA MAIS
+                </Button>
             </form>
         </TextContainer>
       </ContactSectionContainer>
