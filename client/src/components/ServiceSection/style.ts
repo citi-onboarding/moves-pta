@@ -30,5 +30,6 @@ export const Title = styled.h2`
 
 export const Text = styled.p`
   font-size: 16px;
+  text-align: center;
   color: #004a8c;
 `;
