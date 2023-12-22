@@ -8,7 +8,7 @@ export const ServiceSectionContainer = styled.section`
   justify-content: center;
   width: auto;
   height: auto;
-  padding: 30px;
+  padding: 100px;
   flex-wrap: wrap;
 `;
 

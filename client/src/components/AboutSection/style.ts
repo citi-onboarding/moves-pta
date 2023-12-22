@@ -9,13 +9,13 @@ export const AboutSectionContainer = styled.section`
   padding: 30px;
   background-image: url('/img/sobre-bg.svg');
   background-size: cover;
-  background-position: start;
-  width: auto;
-  min-width: 100%; /* Ensure minimum width is 100% of the viewport */
+  background-position: center;
+  width: 100%; /* Ensure minimum width is 100% of the viewport */
   min-height: 100vh; /* Set minimum height to 100% of the viewport height */
   margin-top: -200px;
-  @media (max-width: 1100px) {
+  @media (max-width: 1000px) {
     flex-direction: column;
+    margin-top: -100px;
   }
 `;
 
