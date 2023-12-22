@@ -11,7 +11,7 @@ export const AboutSectionContainer = styled.section`
   background-size: cover;
   background-position: center;
   width: 100%; /* Ensure minimum width is 100% of the viewport */
-  min-height: 100vh; /* Set minimum height to 100% of the viewport height */
+  min-height: 113vh; /* Set minimum height to 100% of the viewport height */
   margin-top: -200px;
   @media (max-width: 1000px) {
     flex-direction: column;
