@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { TextField, Button } from '@mui/material';
+import Input  from '../InputComponent/index';
 import useMediaQuery from '@mui/material/useMediaQuery'
 import {
   ContactSectionContainer,
@@ -59,123 +60,10 @@ export default function ContactSection() {
           <ParagraphContainer>
             Se interessou pela nossa solução ou quer fazer parte dela? Tem mais alguma dúvida? Não exite em falar conosco!
           </ParagraphContainer>
-          <TextField
-            id="name"
-            label="DIGITE SEU NOME"
-            variant="outlined"
-            margin="normal"
-            value={formData.name}
-            onChange={handleChange}
-            sx={{
-                width: isSmallScreen ? '100%' : '558px', // Change width based on screen size
-                height: '40px',
-              }}
-            InputLabelProps={{
-              sx: {
-                color: '#004a8c',
-                fontWeight: 'bold',
-              },
-            }}
-            InputProps={{
-              sx: {
-                '& input::placeholder': {
-                  color: '#004a8c',
-                  fontWeight: 'bold',
-                },
-                '& fieldset': {
-                  borderColor: '#004a8c !important',
-                },
-              },
-            }}
-          />
-          <TextField
-            id="email"
-            label="DIGITE SEU E-MAIL"
-            variant="outlined"
-            margin="normal"
-            value={formData.email}
-            onChange={handleChange}
-            sx={{
-                width: isSmallScreen ? '100%' : '558px', // Change width based on screen size
-                height: '40px',
-              }}
-            InputLabelProps={{
-              sx: {
-                color: '#004a8c',
-                fontWeight: 'bold',
-              },
-            }}
-            InputProps={{
-              sx: {
-                '& input::placeholder': {
-                  color: '#004a8c',
-                  fontWeight: 'bold',
-                },
-                '& fieldset': {
-                  borderColor: '#004a8c !important',
-                },
-              },
-            }}
-          />
-          <TextField
-            id="phone"
-            label="DIGITE SEU TELEFONE"
-            variant="outlined"
-            margin="normal"
-            value={formData.phone}
-            onChange={handleChange}
-            sx={{
-                width: isSmallScreen ? '100%' : '558px', // Change width based on screen size
-                height: '40px',
-              }}
-            InputLabelProps={{
-              sx: {
-                color: '#004a8c',
-                fontWeight: 'bold',
-              },
-            }}
-            InputProps={{
-              sx: {
-                '& input::placeholder': {
-                  color: '#004a8c',
-                  fontWeight: 'bold',
-                },
-                '& fieldset': {
-                  borderColor: '#004a8c !important',
-                },
-              },
-            }}
-          />
-          <TextField
-            id="message"
-            label="DIGITE SUA MENSAGEM"
-            variant="outlined"
-            margin="normal"
-            multiline
-            rows={5}
-            value={formData.message}
-            onChange={handleChange}
-            sx={{
-                width: isSmallScreen ? '100%' : '558px', // Change width based on screen size
-              }}
-            InputLabelProps={{
-              sx: {
-                color: '#004a8c',
-                fontWeight: 'bold',
-              },
-            }}
-            InputProps={{
-              sx: {
-                '& input::placeholder': {
-                  color: '#004a8c',
-                  fontWeight: 'bold',
-                },
-                '& fieldset': {
-                  borderColor: '#004a8c !important',
-                },
-              },
-            }}
-          />
+          <Input id="name" label="DIGITE SEU NOME" value={formData.name} onChange={handleChange} rows={1} isSmallScreen={isSmallScreen} />
+          <Input id="email" label="DIGITE SEU E-MAIL" value={formData.email} onChange={handleChange} rows={1} isSmallScreen={isSmallScreen} />
+          <Input id="phone" label="DIGITE SEU TELEFONE" value={formData.phone} onChange={handleChange} rows={1} isSmallScreen={isSmallScreen} />
+          <Input id="message" label="DIGITE SUA MENSAGEM" value={formData.message} onChange={handleChange} rows={5} isSmallScreen={isSmallScreen} />
           <Button type="submit" variant="contained" color="primary" sx={{ width: '193px', height: '40px' }} style={buttonStyles} onSubmit={handleSubmit}>
             SAIBA MAIS
           </Button>

@@ -11,7 +11,7 @@ export const ContactSectionContainer = styled.section`
   background-position: center;
   width: 100%; /* Ensure minimum width is 100% of the viewport */
   min-height: 140vh; /* Set minimum height to 100% of the viewport height */
-  margin-top: -20px;
+  margin-top: -100px;
 `;
 
 export const ImageContainer = styled.div`
