@@ -6,13 +6,13 @@ export const AboutSectionContainer = styled.section`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 30px;
   background-image: url('/img/sobre-bg.svg');
   background-size: cover;
   background-position: center;
   width: 100%; /* Ensure minimum width is 100% of the viewport */
   min-height: 113vh; /* Set minimum height to 100% of the viewport height */
   margin-top: -200px;
+  padding: 30px;
   @media (max-width: 1000px) {
     flex-direction: column;
     margin-top: -100px;
