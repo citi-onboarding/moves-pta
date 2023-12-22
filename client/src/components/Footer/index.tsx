@@ -14,14 +14,14 @@ export default function FooterSection({ facebook, linkedin, instagram }: UserCar
     return(
         <Footer>
             <IconContainer>
-                <Link href={facebook}>
-                    <IconImage src={FacebookIcon} alt="Facebook"/>
+                <Link href={instagram}>
+                    <IconImage src={InstagramIcon} alt="Instagram" />
                 </Link>
                 <Link href={linkedin}>
                     <IconImage src={LinkedinIcon} alt="LinkedIn" />
                 </Link>
-                <Link href={instagram}>
-                    <IconImage src={InstagramIcon} alt="Instagram" />
+                <Link href={facebook}>
+                    <IconImage src={FacebookIcon} alt="Facebook"/>
                 </Link>
             </IconContainer>
             <TextContainer>

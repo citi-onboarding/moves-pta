@@ -1,23 +1,22 @@
 import styled from "styled-components";
 import Image from "next/image"; // Import the next/image component
 
-export const AboutSectionContainer = styled.section`
+export const HeroSectionContainer = styled.section`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 30px;
-  background-image: url('/img/sobre-bg.svg');
+  background-image: url('/img/hero-bg.svg');
   background-size: cover;
   background-position: start;
-  width: auto;
-  min-width: 100%; /* Ensure minimum width is 100% of the viewport */
-  min-height: 100vh; /* Set minimum height to 100% of the viewport height */
-  margin-top: -200px;
-  @media (max-width: 1100px) {
-    flex-direction: column;
-  }
+  min-width: 100%;
+  min-height: 100vh;
+  padding: 30px;
+  margin-top: 860px;
+  /* Add margin/padding to create space above this section */
+  /* For example, you can add padding-top to the body or a wrapper div */
 `;
+
 
 
 
@@ -25,20 +24,18 @@ export const ImageContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 30px;
 
-  @media (max-width: 1100px) {
-    margin-bottom: 30px;
-  }
+    @media (max-width: 1100px) {
+        display: none;
+    }
 `;
 
 export const SobreImage = styled(Image)`
-  width: 558px;
-  height: 372px;
+  width: 554px;
+  height: 489px;
 
     @media (max-width: 1100px) {
-        width: 360px; /* Make the image take up the whole width on smaller screens */
-        height: 240px;
+        display: none;
     }
 `;
 
@@ -53,15 +50,14 @@ export const TextContainer = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 30px;
+  font-size: 42px;
   font-weight: 700;
   color: #004a8c;
   margin-bottom: 20px;
 `;
 
-export const ParagraphContainer = styled.p`
-  font-size: 16px;
-  font-weight: 400;
+export const Text = styled.p`
+  font-size: 18px;
+  font-weight: bold;
   color: #004a8c;
-  margin-bottom: 20px;
 `;
