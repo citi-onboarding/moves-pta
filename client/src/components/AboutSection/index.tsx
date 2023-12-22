@@ -10,9 +10,13 @@ import {
 } from './style';
 import { SobreImagem } from 'assets'; // Assuming you have this image imported
 
-export default function AboutSection() {
+type AboutSectionProps = {
+    id?: string;
+};
+
+export default function AboutSection({ id }: AboutSectionProps) {
     return (
-        <AboutSectionContainer>
+        <AboutSectionContainer id={id}>
             <ImageContainer />
                 <SobreImage src={SobreImagem} alt='Somos uma comunidade'/>
             <ImageContainer />

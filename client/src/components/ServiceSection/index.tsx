@@ -3,9 +3,14 @@ import { ServiceSectionContainer, ServicesContainer, Title, Text } from './style
 import ServiceComponent from '../ServiceComponent/index';
 import { Service1, Service2, Service3 } from 'assets'; // Assuming you have these images imported
 
-export default function ServiceSection() {
+
+type ServiceSectionProps = {
+    id?: string;
+};
+
+export default function ServiceSection({ id }: ServiceSectionProps) {
     return (
-        <ServiceSectionContainer>
+        <ServiceSectionContainer id={id}>
             <Title>SERVIÇOS</Title>
             <Text>
                 A Move’s é uma tecnologia da informação e comunicação (TIC) em formato de aplicativo de Smartphone, que fornece, em uma só plataforma:

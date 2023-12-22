@@ -2,7 +2,12 @@ import { PersonSectionContainer, PersonContainer, Title, Text } from './style';
 import PersonComponent from '../PersonComponent/index';
 import { PammelaAvatar, MarianaAvatar, MatheusAvatar } from 'assets'; // Assuming you have these images imported;
 
-export default function PersonSection() {
+
+type PersonSectionProps = {
+    id?: string;
+};
+
+export default function PersonSection({ id }: PersonSectionProps) {
 
     const peopleData = [
         {
@@ -26,7 +31,7 @@ export default function PersonSection() {
     ];
 
     return (
-        <PersonSectionContainer>
+        <PersonSectionContainer id={id}>
             <Title>TIME</Title>
             <Text>
                 O que mais nos impulsiona e inspira é a inclusão. Buscamos propagar o turismo acessível para pessoas com mobilidade reduzida nas atividades turísticas e de lazer, através da informação sobre acessibilidade. Nós somos a Move’s.
