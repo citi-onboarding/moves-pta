@@ -19,6 +19,7 @@ export const PersonContainer = styled.div`
   align-items: baseline;
   justify-content: center;
   margin-top: 80px;
+  flex-wrap: wrap;
   gap: 45px;
 `;
 

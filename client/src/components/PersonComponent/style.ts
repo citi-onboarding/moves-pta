@@ -8,7 +8,8 @@ export const PersonContainer = styled.div`
     justify-content: center;
     text-align: center;
     width: 364px;
-    height: 335px
+    height: 335px;
+    margin-bottom: 100px;
 `;
 export const PersonImage = styled(Image)`
     width: 223px;
