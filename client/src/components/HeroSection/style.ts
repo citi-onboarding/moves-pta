@@ -9,10 +9,10 @@ export const HeroSectionContainer = styled.section`
   background-image: url('/img/hero-bg.svg');
   background-size: cover;
   background-position: start;
-  min-width: 100%;
+  width: 100%;
   min-height: 100vh;
   padding: 30px;
-  margin-top: 860px;
+  margin-top: 1400px;
   /* Add margin/padding to create space above this section */
   /* For example, you can add padding-top to the body or a wrapper div */
 `;
