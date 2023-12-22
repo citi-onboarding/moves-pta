@@ -1,34 +1,42 @@
-// pages/api/sendEmail.js
-
 import nodemailer from 'nodemailer';
 
-export default async function handler(req : any, res : any) {
+export default async function handler(req:any, res: any) {
+  if (req.method === 'GET') {
+    // Handle GET request for debugging
+    return res.status(200).json({ message: 'Server is up and running!' });
+  }
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
 
   const { name, email, phone, message } = req.body;
 
+  const emailUser = "nodemailer@citi.org.br";
+  const emailPass = "ckwl qdqe depd tvar";
+
+  if (!emailUser || !emailPass) {
+    return res.status(500).json({ error: 'Email credentials not provided' });
+  }
+
   // Create a Nodemailer transporter
   let transporter = nodemailer.createTransport({
-    /* Configure your email service here (SMTP, etc.) */
     service: 'gmail',
     auth: {
-      user: 'felipe.torres@citi.org.br',
-      pass: 'Fetoma10!',
+      user: emailUser,
+      pass: emailPass,
     },
   });
 
   // Email content
   const mailOptions = {
-    from: 'felipe.torres@citi.org.br',
-    to: 'ftm2@cin.ufpe.br',
-    subject: 'New Contact Form Submission',
+    from: emailUser,
+    to: 'ftmacedo.torres@gmail.com',
+    subject: 'Novo contato do site',
     html: `
-      <p>Name: ${name}</p>
+      <p>Nome: ${name}</p>
       <p>Email: ${email}</p>
-      <p>Phone: ${phone}</p>
-      <p>Message: ${message}</p>
+      <p>Telefone: ${phone}</p>
+      <p>Mensagem: ${message}</p>
     `,
   };
 
@@ -39,6 +47,7 @@ export default async function handler(req : any, res : any) {
     res.status(200).json({ message: 'Email sent successfully' });
   } catch (error) {
     console.error('Error sending email:', error);
+    console.log('Email not sent');
     res.status(500).json({ error: 'Error sending email' });
   }
 }
