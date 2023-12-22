@@ -57,13 +57,11 @@ function ResponsiveAppBar() {
             <Image className="LogoS" src={LogoMoves} alt="Logo Moves" width={214} height={99} />
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "#004A8C", display: "block" }}
-                >
-                  {page}
-                </Button>
+                <Link key={page} to={page} smooth={true} duration={500} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                  <Button key={page} sx={{ my: 2, color: '#004A8C', display: 'block' }}>
+                    {page}
+                  </Button>
+                </Link>
               ))}
             </Box>
           </Box>
@@ -111,7 +109,9 @@ function ResponsiveAppBar() {
               {pages.map((page) => (
                 <Link key={page} to={page} smooth={true} duration={500}>
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center" style={{ textTransform: 'uppercase' }}>
+                    {page}
+                  </Typography>
                   </MenuItem>
                 </Link>
               ))}

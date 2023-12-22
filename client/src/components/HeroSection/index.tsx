@@ -4,9 +4,13 @@ import { AppImage } from 'assets'; // Assuming you have this image imported
 import { Button } from '@mui/material';
 import { Link } from 'react-scroll';
 
-export default function AboutSection() {
+type AboutSectionProps = {
+    id?: string;
+};
+
+export default function AboutSection({ id }: AboutSectionProps) {
     return (
-        <HeroSectionContainer>
+        <HeroSectionContainer id={id}>
             <ImageContainer />
                 <SobreImage src={AppImage} alt='MOVES APP'/>
             <ImageContainer />
